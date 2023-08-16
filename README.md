@@ -1,30 +1,29 @@
 # Topic-Modeling
 [![Follow](https://img.shields.io/twitter/follow/gensim_py.svg?style=social&style=flat&logo=twitter&label=Follow&color=blue)](https://twitter.com/KAfzalnia76689)
 
-Topic Modeling Using LDA algorithm
+Topic Modeling with the LDA algorithm. ([Notebook](https://github.com/Keyvan-af/Topic-Modeling/blob/main/Topic-Modeling.ipynb))
 ## Installation
-LDA algorithm require gensim 3.8.3 and this version of gensim need to run in python=<3.6
+The LDA algorithm requires gensim 3.8.3 and this version of gensim must run in python=<3.6
 ```bash
 pip install gensim==3.8.3
 ```
 ## Usage
 ```python
-ldamallet = gensim.models.wrappers.LdaMallet(mallet_path, corpus=corpus, num_topics=20, id2word=id2word)
+import gensim.corpora as corpora
+from gensim.utils import simple_preprocess
+from gensim.models import CoherenceModel
 ```
-## Abstract
-Topic Modeling is a technique to extract the hidden topics from large volumes of text.Topic Models are very useful for the purpose for document clustering, organizing large blocks of textual data, information retrieval from unstructured text and feature selection.
+## Summary
+Topic Modeling is a technique for extracting hidden topics from large amounts of text.Topic Models are very useful for clustering documents, organizing large blocks of textual data, extracting information from unstructured text and feature selection.
 
-Here I use [LDA](https://jonathan-hui.medium.com/machine-learning-latent-dirichlet-allocation-lda-1d9d148f13a4) algorithm to do the topic modeling and use pyLDAvis and other tools to interpret and visualize the results.
-## Notebook Outline:
-- Environment set-up
-- Loading Data and get a brief overview of columns
-- Preprocessing and EDA
-- Topic Moodeing Using LDA algorithm
+Here I use the [LDA](https://jonathan-hui.medium.com/machine-learning-latent-dirichlet-allocation-lda-1d9d148f13a4) algorithm for topic modeling and use pyLDAvis and other tools to interpret and visualize the results.
 ## Dataset
-I have taken review data from [Trustpilot.com](https://www.trustpilot.com/). It consists of about 2000 reviews of various UK train companies. The data is stored in a JSON file and contains the comment itself, when it was submitted, to which site it was submitted, and the review scores the user gave.
+I have taken review data from [Trustpilot.com](https://www.trustpilot.com/). It consists of about 2000 reviews of various UK train companies. The data is stored in a JSON file and includes the comment itself, when it was submitted, to which site it was submitted, and the review scores the user gave.
 ## Concluding Topics
-- **TOPIC 0:** It's  about customer experience during the travel(toilet, carriage, passenger, ...) like how staff treat passengers, the timing of travel(whether it has delay or not), hygienic services like toilets, seats and the wifi conncetion, interenet.
-- **Topic 1:** It's about the user experience of their webistes and the qulity of servies provided on webiste like getting ticket, choosing seats and cost of travels and services.
-- **Topic 2:** It's about the services that passengers recieve before or after the trip regarding to ticket and other after/before sales services. It's also about booking tickets, refund and retuning tickets and how service providers handle canceling tickets and trip due to bad whether or unexpected events
-
-Note that I could increase topic number but after some test/run I observe that we had overlap in topic semantics so by choosing 3 topics we have the most distinct topics(as I illusterated in pyLDAvis graph).
+- ** TOPIC 0:** It's about the customer experience during the trip (toilet, carriage, passenger, ...), how the staff treats the passengers, the timing of the trip (whether there are delays or not), hygienic services such as toilets, seats and the wifi connection, internet.
+![](https://github.com/Keyvan-af/Topic-Modeling/blob/main/Top%20keywords%20of%20topic%200.png)
+- **Topic 1:** It's about the usability of the websites and the quality of the services offered on the website, such as ticket purchase, seat selection and cost of the trips and services.
+![](https://github.com/Keyvan-af/Topic-Modeling/blob/main/Top%20keywords%20of%20topic%201.png)
+- **Topic 2:** It's about the services that passengers receive before or after travel in terms of tickets and other after/before sales services. It's also about ticket booking, ticket refunds and returns, and how service providers handle ticket and trip cancelations due to bad weather or unexpected events
+![](https://github.com/Keyvan-af/Topic-Modeling/blob/main/Top%20keywords%20of%20topic%202.png)
+Note that I could increase the number of topics, but after some testing/running I found that there is overlap in the semantics of the topics, so by choosing 3 topics we have the clearest topics (as I illustrated in the pyLDAvis diagram).
