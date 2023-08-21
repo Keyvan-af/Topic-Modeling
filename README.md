@@ -1,7 +1,7 @@
 # Topic-Modeling
 [![Follow](https://img.shields.io/twitter/follow/gensim_py.svg?style=social&style=flat&logo=twitter&label=Follow&color=blue)](https://twitter.com/KAfzalnia76689)
 
-Topic Modeling with the LDA algorithm. ([Notebook](https://github.com/Keyvan-af/Topic-Modeling/blob/main/Topic-Modeling.ipynb))
+Topic Modeling with the LDA algorithm. ([Notebook](https://drive.google.com/file/d/1L5P8gwKOY_vhvBpp-rZ1yShBQKSs5X6w/view?usp=sharing))
 ## Installation
 The LDA algorithm requires gensim 3.8.3 and this version of gensim must run in python=<3.6
 ```bash
