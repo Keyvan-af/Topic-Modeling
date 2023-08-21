@@ -26,4 +26,6 @@ I have taken review data from [Trustpilot.com](https://www.trustpilot.com/). It 
 ![](https://github.com/Keyvan-af/Topic-Modeling/blob/main/TopKeyWordsOfTopics/Top%20keywords%20of%20topic%201.png)
 - **Topic 2:** It's about the services that passengers receive before or after travel in terms of tickets and other after/before sales services. It's also about ticket booking, ticket refunds and returns, and how service providers handle ticket and trip cancelations due to bad weather or unexpected events
 ![](https://github.com/Keyvan-af/Topic-Modeling/blob/main/TopKeyWordsOfTopics/Top%20keywords%20of%20topic%202.png)
+
+
 Note that I could increase the number of topics, but after some testing/running I found that there is overlap in the semantics of the topics, so by choosing 3 topics we have the clearest topics (as I illustrated in the pyLDAvis diagram).
